@@ -93,7 +93,3 @@ def traitement():
         response['path'] = request.path
         response['request_type'] = request.method
         return json.dumps(response)
-
-
-if __name__ == '__main__' :
-    monAPP.run(host='0.0.0.0', port=1994)
