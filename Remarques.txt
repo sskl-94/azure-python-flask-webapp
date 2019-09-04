@@ -63,7 +63,11 @@ MyFunctions.py & arubaBot_Engine.py can be found in my private github repository
 4- Create an azure web app
 az webapp up -n <app-name>
 
-5- That's it app can be access on : 
+
+5- Change the startup file to arubaBot_Engine :
+az webapp config set --resource-group <resource-group-name> --name <app-name> --startup-file "gunicorn --bind=0.0.0.0 --timeout 600 arubaBot_Engine:monAPP"
+
+6- That's it app can be access on : 
 http://<app-name>.azurewebsites.net
 https://<app-name>.azurewebsites.net
 
