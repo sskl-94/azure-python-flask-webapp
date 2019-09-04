@@ -42,7 +42,7 @@ Keep these files in the application directory
 ######################################################
 APP deployment Process in Azure using Open Cloud Shell
 ######################################################
-1- Open Cloud Shell in microsoft azure portal after signing in
+1- Open Cloud Shell in microsoft azure portal after signing in. Use Bash Shell
 
 2- Create a folder to contain the app
 mkdir quickstart
@@ -52,6 +52,10 @@ cd quickstart
 git clone https://github.com/sskl-94/azure-python-flask-webapp
 cd azure-python-flask-webapp
 
+3-a- More file can be created using the Azure Cloud Shell
+code <file_name.py>
+or vim <file_name.py>
+
 4- Create an azure web app
 az webapp up -n <app-name>
 
@@ -60,3 +64,4 @@ http://<app-name>.azurewebsites.net
 https://<app-name>.azurewebsites.net
 
 For more documentation : https://docs.microsoft.com/fr-fr/azure/app-service/containers/quickstart-python
+
