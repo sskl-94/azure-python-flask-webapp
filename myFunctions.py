@@ -411,8 +411,3 @@ def eteindre_wifi (base_url, atoken, device_serial, device_mac):
     else:
         print("Failure! The code is: {}".format(resp.status_code))
     return
-
-
-
-if __name__ == '__main__':
-    main()
