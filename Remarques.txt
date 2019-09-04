@@ -58,6 +58,7 @@ cd azure-python-flask-webapp
 3-a- More file can be created using the Azure Cloud Shell
 code <file_name.py>
 or vim <file_name.py>
+MyFunctions.py & arubaBot_Engine.py can be found in my private github repository arubabot
 
 4- Create an azure web app
 az webapp up -n <app-name>
