@@ -1,0 +1,62 @@
+#################
+application.py :
+#################
+a simple python hello-world code to test a web application
+this is also the default startup file of azure application
+if we want to specify another file as startup file : 
+  Run on the "Azure Cloud Shell" :
+  az webapp config set --resource-group <resource-group-name> --name <app-name> --startup-file "<custom-command>"
+  Exemple if the custom startup-file is arubaBot_Engine.py and on this file the created app name is monAPP then this command line will be :
+    az webapp config set --resource-group <resource-group-name> --name <app-name> --startup-file "gunicorn --bind=0.0.0.0 --timeout 600 arubaBot_Engine:monAPP"
+    documentation : https://docs.microsoft.com/fr-fr/azure/app-service/containers/how-to-configure-python
+    section : Commande de démarrage personnalisée
+    
+##################    
+Requirements.txt :
+##################
+This file contain the list of module to be installed with the "pip install" command.
+Those modules are necessary for our application to work properly.
+At the begin, azure execut pip install -r of this file text.
+If we want to install new modules/framework/library they must be added to this list.
+
+
+################
+myFunctions.py
+################
+Contains the function used with dialogflow and aruba central to perform api request to aruba central or treat webhook from dialogflow
+
+
+###############
+arubaBot_Engine
+###############
+Will be configured as our startup file
+
+
+#################
+LICENSES & README
+#################
+Keep these files in the application directory
+
+
+
+######################################################
+APP deployment Process in Azure using Open Cloud Shell
+######################################################
+1- Open Cloud Shell in microsoft azure portal after signing in
+
+2- Create a folder to contain the app
+mkdir quickstart
+cd quickstart
+
+3- Clone this github sample application
+git clone https://github.com/sskl-94/azure-python-flask-webapp
+cd azure-python-flask-webapp
+
+4- Create an azure web app
+az webapp up -n <app-name>
+
+5- That's it app can be access on : 
+http://<app-name>.azurewebsites.net
+https://<app-name>.azurewebsites.net
+
+For more documentation : https://docs.microsoft.com/fr-fr/azure/app-service/containers/quickstart-python
