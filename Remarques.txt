@@ -66,6 +66,7 @@ az webapp up -n <app-name>
 
 5- Change the startup file to arubaBot_Engine :
 az webapp config set --resource-group <resource-group-name> --name <app-name> --startup-file "gunicorn --bind=0.0.0.0 --timeout 600 arubaBot_Engine:monAPP"
+<resource-group-name> can be found in portal azure plateforme on the application dashboard
 
 6- That's it app can be access on : 
 http://<app-name>.azurewebsites.net
